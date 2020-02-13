@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- 보안 설정을 위한 xml -->
+
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns="http://www.springframework.org/schema/security"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+   <http>   
+		<intercept-url pattern="/member/**" access="hasRole('CUSTOMER')"/>
+		<intercept-url pattern="/company/**" access="hasRole('COMPANY')"/>
+		
+		<form-login authentication-failure-forward-url="/login/login?error=1" 
+					login-processing-url="/login/login" 
+					login-page="/login/login" 
+					default-target-url="/index" 
+					/>
+		 <csrf disabled="true"/>
+		<logout logout-url="/logout" logout-success-url="/index"/>		
+   </http>
+   
+   <authentication-manager>
+   		<authentication-provider>
+   			 <jdbc-user-service 
+   			 	data-source-ref="dataSource"
+   			 	users-by-username-query="SELECT loginId id, pwd password, 1 disabled FROM  ALL_Role where loginId=?" 
+   			 	authorities-by-username-query="select loginId id, roleId from ALL_Role where loginId = ?"/>
+	
+   			<password-encoder hash="bcrypt"/> 
+   		</authentication-provider>
+   </authentication-manager>
+</beans:beans> 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link href="./css/default.css" type="text/css" rel="stylesheet">
+
+<style>
+	.text-box{
+		background: #dadada;
+		width: 250px;
+		height: 27px;
+		margin-left: 70px;
+	}
+	#content-box {
+      width: 620px;
+  	  height: 460px;
+  	  border: 1px solid black;
+	  border-radius: 50px;
+    }
+	#title-box{
+		position: relative;
+		left: 485px;
+	}
+	form{
+		margin-top: 45px;
+  		margin-left: 140px;
+	}
+
+	form span{
+		font-size: 25px;
+	}
+
+	form *{
+		margin-top: 15px;
+	}
+	
+	#text-id{
+		display: flex;
+	}
+	#text-pwd{
+		display: flex;
+	}
+	#text-email{
+		display: flex;
+	}
+	#text-position{
+		display: flex;
+	}
+	#text-phone{
+		display: flex;
+	}
+	#member-icon{
+		position: absolute;
+		left: 104px;
+		width: 25px;
+		height: 25px;
+	}
+	#text-box-pwd{
+		margin-left: 52px;
+	}
+	#text-box-phone{
+		margin-left: 35px;
+	}
+	#position-icon{
+		margin-left: 57px;
+	}
+	#select{
+		position: absolute;
+		right: 100px;
+		bottom: 80px;
+	}
+	#select *{
+		margin-left: 10px;
+  		font-size: 19px;
+	}
+	#select *:hover{
+		color:#5b9bd5;
+	}
+</style>
+<body>
+	<div id="bg-box">
+	<header id="header">
+			<div>
+				<h1 class="d-none">헤더</h1>
+				<div>
+					<img alt="sideLlst" src="resources/images/list.png" width="25px" height="25px">
+				</div>
+			</div>
+		</header>
+
+	<main id="main">
+		<div id="middle-box">
+			<div id="title-box">
+				<h1 id="title">
+					<span id="text-red">MY</span><span>P</span><span id="text-green">A</span><span>G</span><span id="text-blue">E</span>
+				</h1>
+			</div>
+			
+			<div id="content-box">
+				<form action="edit" method="post">
+					<img id="member-icon" src="resources/images/memberIcon.png">
+					<div id="text-id"><span>아이디</span> <div class="text-box"></div></div>
+					<div id="text-pwd"><span>비밀번호</span> <div id="text-box-pwd" class="text-box"></div></div>
+					<div id="text-email"><span>이메일</span> <div class="text-box"></div></div>
+					<div id="text-position"><span>위치정보</span><img id="position-icon" style="width: 25px; height: 25px;" src="resources/images/onOffIcon.png"></div>
+					<div id="text-phone"><span>휴대폰번호</span> <div id="text-box-phone" class="text-box"></div></div>
+					
+					<div id="select">
+						<a href="" >수정</a>
+						<a href="" >탈퇴</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<footer id="footer">
+		<div id="footer-box">
+			<!-- 회사명, 사업자번호, 대표자, 연락처, 주소 -->
+			<h2 class="d-none">회사소개</h2>
+			<div>
+				<dl>
+					<dt>회사명:</dt>
+					<dd>MOMO</dd>
+					<dt>대표자:</dt>
+					<dd>정다혜</dd>
+					<dt>연락처:</dt>
+					<dd>010-2550-8923</dd>
+				</dl>
+				<dl>
+					<dt>주소:</dt>
+					<dd>서울특별시 중구 다동 88 에이콘 아카데미 종로지점</dd>
+				</dl>
+			</div>
+			<p>Copyright ⓒ momo.com 2019-2019 All Right Reserved. Contact
+				admin@momo.com for more information</p>
+		</div>
+	</footer>
+</div>	
+</body>
+</html>

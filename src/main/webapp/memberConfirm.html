@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.text-box2 {
+   background: #dadada;
+   width: 250px;
+   height: 27px;
+   margin-left: 43px;
+   margin-top: 19px;
+}
+
+#article-box {
+   width: 700px;
+   min-height: 400px;
+   border: 1px solid black;
+   border-radius: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 20px;
+}
+
+#company-id {
+   font-size: 20px;
+}
+
+#reason-box {
+   display: flex;
+   margin-left: 110px;
+   margin-top: 20px;
+}
+
+#text-box {
+   width: 350px;
+   height: 140px;
+   background: #dadada;
+   text-align: start;
+   margin-left: 50px;
+   vertical-align: middle;
+   margin-top: 7px;
+}
+#explan {
+   font-size: 14px;
+   margin-left: 120px;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+#withDrawal-btn{
+   display: inline-block;
+   margin-left: 280px;
+   margin-bottom: 25px;
+}
+
+input[type="submit"] {
+   position: absolute;
+   width: 130px;
+   background: red;
+   height: 50px;
+   color: white;
+   font-weight: bolder;
+   font-size: 17px;
+   bottom: 204px;
+   left: 587px;
+}
+
+#title-box {
+   position: relative;
+   left: 450px;
+}
+
+textarea::placeholder {
+   padding-top: 10px;
+   padding-left: 15px;
+}
+#company-id, #company-pwd{
+	background: #dadada;
+	width: 200px;
+	height: 25px;
+	margin-left: 90px;
+}
+#company-pwd{
+	margin-left: 98px;
+    width: 196px;
+    height: 21px;
+}
+
+#id{ 
+  	display: flex;
+} 
+#form-box{
+	margin-left: 180px;
+    margin-top: 80px;
+}
+#form-box *{
+	margin-top: 24px;
+}
+#confirm-text{
+	font-size: 14px;
+    color: #848484;
+    position: absolute;
+    left: 590px;
+}
+</style>
+</head>
+<link rel="stylesheet" type="text/css"
+   href="./resources/css/default.css">
+<link rel="stylesheet" type="text/css"
+   href="./resources/css/company_withDrawal.css">
+<body>
+   <div id="bg-box">
+      <header id="header">
+         <div>
+            <h1 class="d-none">헤더</h1>
+            <div>
+               <img alt="sideLlst" src="resources/images/list.png" width="25px"
+                  height="25px">
+            </div>
+         </div>
+      </header>
+
+      <main id="main">
+      <div id="middle-box">
+         <div id="title-box">
+            <h1 id="title">
+               <span id="text-red">C</span><span>ON</span><span id="text-green">FI</span><span>R</span><span
+                  id="text-blue">M</span>
+            </h1>
+         </div>
+         <div id="content-box">
+            <div id="article-box">
+               <form id="form-box" action="" method="POST">
+                  <div id="id">
+                     <span>사업자 ID</span><div id="company-id" ></div>
+                  </div>
+                  <div id="pwd">
+                     <span>비밀번호</span><input type="text" id="company-pwd" >
+                  </div>
+                  <span id="confirm-text">정말로 탈퇴 하시겠습니까?</span>
+                  <div id="withDrawal-btn">
+                     <input type="submit" value="확인">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      </main>
+
+      <footer id="footer">
+         <div id="footer-box">
+            <!-- 회사명, 사업자번호, 대표자, 연락처, 주소 -->
+            <h2 class="d-none">회사소개</h2>
+            <div>
+               <dl>
+                  <dt>회사명:</dt>
+                  <dd>MOMO</dd>
+                  <dt>대표자:</dt>
+                  <dd>정다혜</dd>
+                  <dt>연락처:</dt>
+                  <dd>010-2550-8923</dd>
+               </dl>
+               <dl>
+                  <dt>주소:</dt>
+                  <dd>서울특별시 중구 다동 88 에이콘 아카데미 종로지점</dd>
+               </dl>
+            </div>
+            <p>Copyright ⓒ momo.com 2019-2019 All Right Reserved. Contact
+               admin@momo.com for more information</p>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>

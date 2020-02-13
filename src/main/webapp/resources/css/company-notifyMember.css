@@ -1,0 +1,102 @@
+#main {
+	padding: 56px;
+	height: 500px;
+}
+
+#middle-box {
+	width: 590px;
+	height: 330px;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 60px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#title {
+	font-size: 40px;
+}
+
+#title-box {
+	width: 530px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: block;
+}
+
+#title-box>form {
+	margin-top: 40px;
+}
+
+#notifyForm {
+	height: 250px;
+	text-align: left;
+	padding-left: 50px;
+	font-size: 20px;
+}
+
+#notifyForm>div {
+	padding-top: 20px;
+	display: flex;
+}
+
+#notifyForm>div>label {
+	padding-right: 10px;
+	width: 75px;
+}
+
+#notifyForm>div>input {
+	width: 350px;
+	height: 25px;
+}
+
+#notifyForm>div>textarea {
+	width: 352px;
+	height: 110px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#notifyMenu {
+	text-align: right;
+	width: 675px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	position: relative;
+	font-size: 18px;
+}
+
+#notifyMenu>input {
+	cursor: pointer;
+	font-family: -webkit-pictograph;
+	font-weight: bold;
+	border: none;
+}
+
+#notifyMenu>#reg {
+	margin-right: 5px;
+	font-size: 18px;
+}
+
+#notifyMenu>#reg:hover {
+	color: #5b9bd5;
+	cursor: pointer;
+}
+
+#notifyMenu>#cancel {
+	margin-right: 150px;
+	font-size: 18px;
+}
+
+#notifyMenu>#cancel:hover {
+	color: #5b9bd5;
+	cursor: pointer;
+}
+
+

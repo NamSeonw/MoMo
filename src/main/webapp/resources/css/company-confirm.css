@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+#title-box {
+	position: relative;
+	left: 450px;
+}
+
+#article-box {
+	width: 700px;
+	min-height: 400px;
+	border: 1px solid black;
+	border-radius: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+}
+
+#id {
+	display: flex;
+}
+
+#company-id, #company-pwd {
+	background: #dadada;
+	width: 200px;
+	height: 25px;
+	margin-left: 90px;
+	text-align: center;
+}
+
+#company-pwd {
+	margin-left: 97px;
+	height: 25px;
+}
+
+#comfirmCompany3 {
+	color: red;
+	position: absolute;
+	font-size:14px;
+	left: 690px;
+	top: 143px;
+}
+
+#withDrawal-btn {
+	width: 310px;
+	height: 60px;
+	display: inline-block;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+#okBtn {
+	width: 130px;
+	background: red;
+	height: 50px;
+	color: white;
+	font-weight: bolder;
+	font-size: 17px;
+	left: 400px;
+}
+
+#cancelBtn {
+	position: absolute;
+	width: 130px;
+	background: red;
+	height: 46px;
+	font: 400 13.3333px Arial;
+	font-weight: bolder;
+	margin-left: 30px;
+	cursor: pointer;
+	text-align: center;
+	border-width: 2px;
+	border-style: outset;
+	border-color: buttonface;
+	border-image: initial;
+}
+
+#cancelBtn>span {
+	position: relative;
+	top: 11.5px;
+	color: white;
+	font-size: 16px;
+}
+
+#form-box {
+	margin-left: 180px;
+	margin-top: 50px;
+}
+
+#form-box * {
+	margin-top: 15px;
+}
+
+#explan {
+	width: 400px;
+	height: 25px;
+	font-size: 14px;
+	margin-left: 120px;
+	margin-bottom: 50px;
+}
+
+#confirm-text1, #confirm-text2 {
+	font-size: 15px;
+	color: black;
+	position: absolute;
+	margin-left: 10px;
+}
+
+#confirm-text1 {
+	margin-top: 30px;
+	left: 470px;
+}
+
+#confirm-text2 {
+	margin-top: 45px;
+	left: 488px;
+}

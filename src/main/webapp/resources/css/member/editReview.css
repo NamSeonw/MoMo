@@ -1,0 +1,79 @@
+@charset "UTF-8";
+	.text-box{
+		background: #dadada;
+		width: 250px;
+		height: 27px;	
+		margin-left: 70px;
+	}
+	#text-red{
+		color: #c00000;
+	}
+	#text-green{
+		color: #70ad47;
+	}
+	#text-blue{
+		color: #5b9bd5;
+	}
+    #content-box {
+      width: 820px;
+  	  height: 460px;
+  	  border: 1px solid black;
+	  border-radius: 50px;
+    }
+    form span{
+		font-size: 25px;
+		vertical-align: middle;
+	}
+	form{
+		margin-top: 30px;
+  		margin-left: 140px;
+	}
+	form *{
+		margin-top: 16px;
+	}
+	#text-date{
+		background: #dadada;
+   		width: 122px;
+    	height: 27px;
+    	margin-left: 51px;
+    	padding-left: 23px;
+	}
+	#text-time{
+		background: #dadada;
+   		width: 122px;
+    	height: 27px;
+		margin-left: 20px;
+    	padding-left: 23px;
+	}
+	#text-position{
+	    margin-left: 90px;
+	}
+	#text-goal{
+	    margin-left: 90px;
+	}
+	#text-content{
+		background: #dadada;
+		margin-left: 89px;
+        width: 351px;
+	    height: 90px;
+	}
+	#member-icon{
+		position: absolute;
+	    left: 100px;
+		width: 25px;
+ 	    top: 42px;
+		height: 25px;
+	}
+	#title-box{
+		position: relative;
+		left: 381px;
+	}
+	#btn{
+	    position: absolute;
+		right: 199px;
+		bottom: 80px;
+		font-size: 20px;
+	}
+	#btn:hover{
+		color: #5b9bd5;
+	}

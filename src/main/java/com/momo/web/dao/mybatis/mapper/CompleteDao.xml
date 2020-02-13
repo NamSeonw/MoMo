@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.momo.web.dao.CompleteDao">
+
+	<select id="getByPostId" resultType="com.momo.web.entity.Complete">
+		select * from Complete where postId =
+		#{postId}
+	</select>
+	
+	<insert id="insert" parameterType="com.momo.web.entity.Complete">
+		insert into Complete (postId,appealId) 
+		values (#{postId},#{appealId})
+	</insert>
+	
+  </mapper>

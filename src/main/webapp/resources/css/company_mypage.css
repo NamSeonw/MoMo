@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+input[type="text"] {
+	width: 200px;
+	height: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+	background: #dadada;
+}
+
+input[type="password"] {
+	width: 200px;
+	height: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+	background: #dadada;
+}
+
+#bg-box{
+	height: 750px;
+}
+
+#middle-box {
+	margin-bottom: 70px;
+}
+
+#onoffBtn {
+	vertical-align: middle;
+}
+
+#company-location-textbox {
+	width: 200px;
+	height: 20px;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+
+#title-box {
+	margin-left: 400px;
+}
+
+#article-box {
+	width: 800px;
+	min-height: inherit;
+	border: 1px solid black;
+	border-radius: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+#article-inbox {
+	width: 700px;
+	height: inherit;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	display: flex;
+}
+
+#input-box {
+	width: 320px;
+	min-height: inherit;
+	-margin-left: 70px;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#company {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#company-name {
+	min-width: inherit;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 0px;
+}
+
+#company-name-input {
+	margin-left: 12px;
+}
+
+#company-pwd {
+	min-width: inherit;
+	display: inline-block;
+	margin-left: 43px;
+	margin-top: 15px;
+}
+
+#company-pwd-input {
+	width: 190px;
+}
+
+#comfirmCompany {
+	color: red;
+	position: absolute;
+	font-size:14px;
+	left: 450px;
+	margin-top: 3px;
+}
+
+#company-menu {
+	min-width: inherit;
+	margin-left: 43px;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#company-location {
+	min-width: inherit;
+	margin-left: 43px;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+#company-tel {
+	min-width: inherit;
+	margin-left: 43px;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+#company-photo {
+	width: inherit;
+	margin-left: 43px;
+	display: inline-block;
+	margin-top: 15px;
+	float: left;
+}
+
+/*파일처리부분*/
+#filebox {
+	display: flex;
+}
+
+#fileName {
+	margin-left: 0px;
+	width: 180px;
+	height: 20px;
+}
+
+.file_input_textbox {
+	margin-left: 0px;
+	margin-right: 5px;
+}
+
+.file_input_div {
+	position: relative;
+	width: 78px;
+	height: 25px;
+	overflow: hidden;
+}
+
+.file_input_button {
+	width: 75px;
+	height: 25px;
+	position: absolute;
+}
+
+.file_input_hidden {
+	font-size: 23px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+}
+
+/* #company-photo .btn_file {
+	display: inline-block;
+	border: 1px solid #000;
+	width: 100px;
+	height: 30px;
+	font-size: 0.8em;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#company-photo input[type="file"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+* / */
+
+
+#company-img {
+	width: 220px;
+	min-height: inherit;
+	margin-top: 33px;
+	margin-left: 120px;
+}
+
+#company-article {
+	margin-left: 92px;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+#company-article-textbox {
+	width: 700px;
+	height: 150px;
+	margin-left: 50px;
+	margin-top: 15px;
+}
+
+#company-article-textbox>textarea {
+	margin-left: 43px;
+	width: 600px;
+	height: 150px;
+	padding-top: 10px;
+	padding-left: 15px;
+	background: #dadada;
+}
+
+#button-box {
+	width: 200px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 540px;
+	margin-bottom: 20px;
+}
+
+#pwdEditBtn {
+	font-size: 18px;
+}
+
+#pwdEditBtn:hover {
+	color: #5b9bd5;
+}
+
+#editBtn {
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+#editBtn:hover {
+	color: #5b9bd5;
+}
+
+#outBtn {
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+#outBtn:hover {
+	color: #5b9bd5;
+}

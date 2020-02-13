@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#title-box {
+	margin-left: 400px;
+}
+
+#article-box {
+	width: 800px;
+	height: 462px;
+	border: 1px solid black;
+	border-radius: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	text-align: center;
+}
+
+.list-table {
+	width: 90%; position : relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	position: relative;
+}
+
+.list-table>thead>tr>th {
+	background: #ebebeb;
+	text-align: center;
+}
+
+.list-table>tbody>tr th, td {
+	border: 0.5px solid #ebebeb;
+	text-align: center;
+}
+
+.w200 {
+	width: 180px;
+}
+
+.w100 {
+	width: 110px;
+}
+
+.w60 {
+	width: 60px;
+}

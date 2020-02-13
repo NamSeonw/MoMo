@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+#middle-box {
+	text-align: center;
+}
+
+#normalize {
+	position: relative;
+    padding-top: 100px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#visible-hr {
+	display: block;
+	width: 800px;
+	border: 1px solid #5b9bd5;
+}
+
+#title {
+	font-size: 60px;
+}
+
+#title-box>h2 {
+	font-size: 25px;
+}
+
+#title-box>span:last-child {
+	font-size: 20px;
+	color: gray;
+}
+
+#findId-form {
+	width: fit-content;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+}
+
+#findId-form label {
+	font-size: 21px;
+}
+
+#input-form {
+	width: 400px;
+}
+
+#input-form input {
+	width: 270px;
+	height: 30px;
+}
+
+#input-form>div {
+	padding-top: 12px;
+}
+
+#name-text {
+	padding-right: 10px;
+}
+
+#button-form {
+	width: 400px;
+	height: 60px;
+	position: relative;
+	margin-top: 20px;
+}
+
+#button-form>input {
+	width: 154px;
+	height: 59px;
+	position: absolute;
+	left: 38px;
+	background-color: #ebebeb;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#button-form>a>input {
+	width: 154px;
+	height: 59px;
+	position: absolute;
+	right: 36px;
+	background-color: #ebebeb;
+	font-size: 15px;
+	font-weight: bold;
+}

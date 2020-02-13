@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+#title-box {
+	margin-left: 400px;
+}
+
+#content-box {
+	width: 800px;
+	border: 1px solid #ebebeb;
+	background: #ebebeb;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	font-size: 17px;
+	text-align: center;
+}
+
+#post-info {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	flex-grow: 0.7;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	border: 1px solid black;
+	background: white;
+	border-radius: 30px;
+}
+
+#appeal-info {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border: 1px solid black;
+	background: white;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+#post-info>div {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#appeal-info>div {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: inherit;
+}
+
+#post-info>div>div, #appeal-info>div>div {
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	padding-top: 10px;
+}
+
+#memberId {
+	font-size: 25px;
+}
+
+#com-name {
+	font-size: 25px;
+}
+
+div>span:last-child{
+	margin-left: 15px;
+}
+
+.left{
+	margin-left: 15px;
+}
+
+#com-name>span:last-child{
+	padding-top: 3px;
+}
+
+#com-regdate{
+}
+/* #post-info div>span:last-child, #appeal-info div>span:last-child {
+	width: 140px;
+	background-color: #dadada;
+} */
+
+/* #reservationDate>span:last-child{
+	width: 446px !important;
+} */
+/* 
+#category {
+	margin-right: 3px;
+}
+
+#category>span:first-child {
+	position: relative;
+	left: -7px;
+}
+
+#category>span:last-child {
+	position: relative;
+	left: -4px;
+}
+
+#location>span:last-child {
+	position: relative;
+	left: 15px;
+}
+
+#cus-content {
+	margin-left: 8px;
+}
+ */
+#cus-content {
+	height: 40px;
+}
+
+#cus-content>.content-span {
+	padding-top: 4px;
+}
+
+#com-content {
+	height: 140px;
+}
+
+/* .content-span {
+	width: 532px !important;
+}
+ */
+/* .blank {
+	flex-grow: 0.5;
+} */
+#btn-box {
+	font-size: 20px;
+	width: fit-content;
+	position: relative;
+	left: 510px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	width: fit-content;
+}
+
+#btn-box>a {
+	padding-right: 10px;
+}

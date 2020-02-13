@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.momo.web.dao.PostDao"> <!-- 구현할 인터페이스 경로-->
+<!-- 매개변수가 2개이상이면  #{id}처럼 쓸 수없음-->
+<!-- 꽂아넣어줄때처럼 그대로 값이 들어가야할때는 ${}씀 -->
+<select id="getList" resultType="com.momo.web.entity.Post">
+select j.* 
+            from(
+				select p.*,m.loginId
+				from Member as m Join Post as p 
+				on m.id=p.memberId 
+				where p.matching = 0
+				order by p.reservationDate desc
+				) j
+            where j.${param2} like '%${param3}%'  
+            limit 4 offset ${param1}
+</select>
+
+<select id="getTotalCount" resultType="Integer">
+	select count(id) count from Post where ${param1} like '%${param2}%' and matching = 0
+</select>
+
+<select id="getCount" resultType="integer">
+select count(*) as count
+	from (
+		select p.*,m.loginId
+		from Member as m Join Post as p on m.id=p.memberId 
+		where p.memberId = #{memberId}
+    order by p.reservationDate desc
+	) j
+	where j.matching=0
+	group by matching
+</select>
+
+<select id="getSuccessCount" resultType="integer">
+select count(*) as count
+	from (
+		select p.*,m.loginId
+		from Member as m Join Post as p on m.id=p.memberId 
+		where p.memberId = #{memberId}
+    order by p.reservationDate desc
+	) j
+	where j.matching = 1
+	group by matching
+</select>
+
+<!-- <메서드를 구현하기위한 쿼리 -->
+<!-- NoticeDao의 Notice를 반환하는 get(int id)의 메소드를 구현하기 위해 select문이 필요하다. -->
+<select id="get" resultType="com.momo.web.entity.Post">
+select p.*,m.loginId 
+from Member as m Join Post as p 
+on m.id=p.memberId
+where p.id=#{id}
+order by p.reservationDate desc <!--get메소드의 매개변수를 el표기처럼 꽂아넣기-->
+</select>
+
+<select id="getByPostId" resultType="com.momo.web.entity.Post">
+ select *
+	from Post
+	where memberId = ${param1}
+
+</select>
+
+
+<select id="getByMemberId" resultType="com.momo.web.entity.Post">
+ select j.* 
+	from(
+		select p.*,m.loginId
+		from Member as m Join Post as p 
+		on m.id=p.memberId 
+	             where p.matching = ${param4} and m.id = #{param5}
+		order by p.reservationDate desc
+		) j
+	where j.${param2} like '%${param3}%'
+	limit ${param6} offset ${param1}
+</select>
+
+<!-- 인서트문 -->
+<insert id="insert" parameterType="com.momo.web.entity.Post">
+INSERT INTO Post(peopleCount,reservationDate,category,content,memberId,location) VALUES(#{peopleCount},#{reservationDate},#{category},#{content},#{memberId},#{location})
+<!--jdbc에서 notice.getTile()과 같은 메서들 명에서 get빼고 첫문자 소문자로바꿔쓰기-->
+</insert>
+
+<update id="update" parameterType="com.momo.web.entity.Post">
+update Post set peopleCount=#{peopleCount},reservationDate=#{reservationDate},category=#{category},content=#{content},memberId=#{memberId},location=#{location},matching=#{matching} where id=#{id}
+</update>
+
+<delete id="delete" parameterType="com.momo.web.entity.Post">
+delete from Post where id=#{id}
+</delete>
+
+</mapper>

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+.text-box{
+		background: #dadada;
+		width: 250px;
+		height: 27px;
+		margin-left: 70px;
+		text-align: center;
+		padding-top: 5px;
+		font-size: 19px;
+}
+#content-box {
+     width: 620px;
+ 	  height: 460px;
+ 	  border: 1px solid black;
+  border-radius: 50px;
+   }
+#title-box{
+	position: relative;
+	left: 485px;
+}
+form{
+	margin-top: 45px;
+ 		margin-left: 140px;
+}
+
+form span{
+	font-size: 25px;
+}
+
+form *{
+	margin-top: 15px;
+}
+
+#text-id{
+	display: flex;
+}
+#text-pwd{
+	display: flex;
+}
+#text-email{
+	display: flex;
+}
+#text-position{
+	display: flex;
+}
+#text-phone{
+	display: flex;
+}
+#member-icon{
+	position: absolute;
+	left: 104px;
+	width: 25px;
+	height: 25px;
+}
+#text-box-pwd{
+	margin-left: 52px;
+}
+#text-box-phone{
+	margin-left: 35px;
+}
+#position-icon{
+	margin-left: 57px;
+}
+#select{
+	position: absolute;
+	right: 100px;
+	bottom: 80px;
+}
+#select *{
+	margin-left: 10px;
+ 		font-size: 19px;
+}
+#select *:hover{
+	color:#5b9bd5;
+}
+#pwd{
+	background: #dadada;
+    position: relative;
+    left: 15px;
+    width: 248px;
+}
+#pwdconfirm{
+	font-size: 15px;
+    position: absolute;
+    top: 140px;
+    left: 320px;
+    color: red;
+}
+#edit{
+	cursor: pointer;
+}
+	

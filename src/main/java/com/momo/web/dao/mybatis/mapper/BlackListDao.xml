@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.momo.web.dao.BlackListDao">
+	<resultMap type="com.momo.web.entity.BlackListView" id="blacklistMap">
+		<result property="customerLoginId"  column="LoginId" />
+		<result property="companyAddress"  column="address" />
+		<result property="companyName"  column="name" />
+		<result property="companyContact"  column="contact" />
+	</resultMap> 
+	
+	<select id="list" resultMap="blacklistMap">
+		select id,title,regdate,postId,loginId from BlackListView where blacklistChk = 0
+		limit 14 offset #{param1};
+	</select>
+	
+	<select id="get" resultMap="blacklistMap">
+		select * from BlackListView where id=#{id}
+	</select>
+
+	<select id="getListCount" resultType="Integer">
+		select count(id) count from BlackListView where blacklistChk=#{param1};
+	</select>
+	
+	<update id="updateByTarget" parameterType="com.momo.web.entity.Notify">
+		update ${param1} set blacklist = ${param3} where id=${param2}
+	</update>
+	
+</mapper>

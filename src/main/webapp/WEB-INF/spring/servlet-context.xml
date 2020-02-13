@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- servlet을 위한 xml -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        
+	<context:component-scan
+		base-package="com.momo.web.controller " /> <!-- scan은 annotation은 생략해도 포함되어있다. -->
+
+	<bean
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="1" />
+	</bean> <!-- tiles 깨우기 -->
+
+	<bean
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions" value="/WEB-INF/tiles.xml" />
+	</bean> <!-- tiles.xml을 맵핑 지시서.. tiles를 사용해서 더 간단하게 하기 -->
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"> <!-- url을 가로채서 붙인당 -->
+		<property name="prefix" value="/WEB-INF/view/" /> <!-- 접두사 -->
+		<property name="suffix" value=".jsp" /> <!-- 접미사 -->
+	</bean>
+	
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+<property name="maxUploadSize" value="100000000" />
+<property name="maxInMemorySize" value="100000000" />
+</bean>
+
+	<!-- <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+		<property name="maxUploadSize" value="209715200" /> java코드가 아니기 때문에 연산이 안된다.. 
+		그래서 직접 연산을 한 값을 넣어준다. </bean> -->
+
+<!-- 	<bean name="/index"
+		class="com.momo.web.controller.IndexController" /> -->
+	<mvc:annotation-driven > <!-- 설정할때 이게 빠지면 안돼 mvc는 새로운 class에 만든다.-->
+		<mvc:message-converters> <!-- responsebody 할때 한글 깨짐 설정 -->
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<mvc:resources location="/resources/" mapping="/resources/**" /> <!-- resource 위치설정 -->
+
+</beans>

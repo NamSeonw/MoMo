@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.momo.web.dao.AppealDao"> <!-- 구현할 인터페이스 경로-->
+<!-- 매개변수가 2개이상이면  #{id}처럼 쓸 수없음-->
+<!-- 꽂아넣어줄때처럼 그대로 값이 들어가야할때는 ${}씀 -->
+<select id="getList" resultType="com.momo.web.entity.Appeal">
+select a.*
+from Company as c 
+	Join Appeal as a on c.id = a.companyId
+where a.companyId = ${param2} and a.matching = ${param3}
+order by a.regdate desc
+limit ${param1},2;
+</select>
+
+<select id="getCount" resultType="integer">
+select count(id) as count from Appeal where companyId = ${param1} and matching = ${param2}
+</select>
+
+<!-- <메서드를 구현하기위한 쿼리 -->
+<!-- NoticeDao의 Notice를 반환하는 get(int id)의 메소드를 구현하기 위해 select문이 필요하다. -->
+<select id="get" resultType="com.momo.web.entity.Appeal">
+select a.* 
+from Company as c Join Appeal as a 
+on c.id=a.companyId
+where a.id=#{id}
+order by a.regdate desc;
+</select>
+
+<!-- postId와 companyId로 검색하여 하나 가져오기 -->
+<select id="getByPidCid" resultType="com.momo.web.entity.Appeal">
+select * 
+from Appeal 
+where postId=#{param1} and companyId=#{param2};
+</select>
+
+<!-- 인서트문 -->
+<insert id="insert" parameterType="com.momo.web.entity.Appeal">
+<!--jdbc에서 notice.getTile()과 같은 메서들 명에서 get빼고 첫문자 소문자로바꿔쓰기 -->
+insert into Appeal(postId,companyId,content) values(#{postId},#{companyId},#{content});
+</insert>
+
+<update id="update" parameterType="com.momo.web.entity.Appeal">
+update Appeal set postId=#{postId}, companyId=#{companyId}, regdate=CURRENT_TIMESTAMP, content=#{content},matching=#{matching} where id=#{id};
+</update>
+
+<delete id="delete" parameterType="com.momo.web.entity.Appeal">
+delete from Appeal where id=#{id}
+</delete>
+
+</mapper>

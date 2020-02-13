@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+#title-box {
+	margin-left: 400px;
+}
+
+#content-box {
+	width: 800px;
+	height: 462px;
+	border: 1px solid black;
+	border-radius: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+#post-info {
+	flex-grow: 0.7;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: 20px;
+}
+
+#post-info>div {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#blank {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+	width: 304.56;
+}
+
+#memberId {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#peopleCount {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#reservationDate {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#category {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+	margin-right: 3px;
+}
+
+#category>span:first-child {
+	position: relative;
+	left: -7px;
+}
+
+#category>span:last-child {
+	position: relative;
+	left: -4px;
+}
+
+#location {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#location>span:last-child {
+	position: relative;
+	left: 15px;
+}
+
+#post-info div>span:last-child {
+	width: 140px;
+	background-color: #dadada;
+}
+
+#cus-content {
+	flex-grow: 0.5;
+	display: flex;
+	justify-content: space-evenly;
+	margin-left: 8px;
+}
+
+#content-span {
+	width: 446px !important;
+    margin-left: 7px;
+}
+
+#blank-span {
+	width: 140px;
+}
+
+#span-blank {
+	width: 61.45px;
+}
+
+.blank {
+	flex-grow: 0.5;
+}
+
+#write-box {
+	flex-grow: 3;
+	width: 570px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#write-box>form {
+	height: 80%;
+}
+
+#input-content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+#content-textarea {
+	height: 88%;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#write-div {
+	text-align: right;
+}
+
+#write {
+	display: inline-block;
+}

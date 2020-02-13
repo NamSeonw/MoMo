@@ -1,0 +1,90 @@
+@charset "UTF-8";
+input[type="text"] {
+   width: 200px;
+   height: 20px;
+   vertical-align: middle;
+   margin-left: 56px;
+   background: #dadada;
+}
+
+.text-box2 {
+   background: #dadada;
+   width: 250px;
+   height: 27px;
+   margin-left: 43px;
+   margin-top: 19px;
+}
+
+#article-box {
+   width: 700px;
+   min-height: inherit;
+   border: 1px solid black;
+   border-radius: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 20px;
+}
+
+#company-id {
+   font-size: 20px;
+   margin-left: 110px;
+   margin-top: 20px;
+}
+
+#company-regdate {
+   margin-left: 110px;
+   margin-top: 20px;
+}
+
+#company-regdate label {
+   margin-left: 63px;
+}
+
+#reason-box {
+   display: flex;
+   margin-left: 110px;
+   margin-top: 20px;
+}
+
+#text-box {
+   width: 350px;
+   height: 140px;
+   background: #dadada;
+   text-align: start;
+   margin-left: 50px;
+   vertical-align: middle;
+   margin-top: 7px;
+}
+#explan {
+   font-size: 14px;
+   margin-left: 120px;
+   margin-top: 20px;
+   margin-bottom: 30px;
+}
+
+#withDrawal-btn{
+   display: inline-block;
+   margin-left: 280px;
+   margin-bottom: 25px;
+}
+
+
+input[type="submit"] {
+   -position: absolute;
+   width: 130px;
+   background: red;
+   height: 50px;
+   color: white;
+   font-weight: bolder;
+   font-size: 17px;
+}
+
+#title-box {
+   position: relative;
+   left: 450px;
+}
+
+textarea::placeholder {
+   padding-top: 10px;
+   padding-left: 15px;
+}

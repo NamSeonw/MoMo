@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+#header>div>div {
+    float: right;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+#back {
+	position: relative;
+    left: -1320px;
+    cursor: pointer;
+}

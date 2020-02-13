@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+<definition name="parent" template="/WEB-INF/view/inc/layout.jsp">
+    <put-attribute name="title" value="MoMo : 모임을 모으다" />
+    <put-attribute name="header" value="/WEB-INF/view/inc/header.jsp" />
+    <put-attribute name="sidebar" value="/WEB-INF/view/inc/sidebar.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/view/inc/footer.jsp" />
+  </definition>
+  
+  <definition name="root.*"  extends="parent">
+    <put-attribute name="main" value="/WEB-INF/view/{1}.jsp" />
+  </definition>
+  
+  <definition name="member.*" extends="parent">
+    <put-attribute name="main" value="/WEB-INF/view/member/{1}.jsp" />
+  </definition>
+  
+  <definition name="review.*" extends="parent">
+    <put-attribute name="main" value="/WEB-INF/view/review/{1}.jsp" />
+  </definition>
+  
+  <definition name="login.*" extends="parent">
+    <put-attribute name="main" value="/WEB-INF/view/login/{1}.jsp" />
+  </definition>
+  
+  <definition name="company.*" extends="parent">
+    <put-attribute name="main" value="/WEB-INF/view/company/{1}.jsp" />
+  </definition>
+  
+</tiles-definitions>
+<!-- DB연결, 데이터 가져오기 등 -->
+	

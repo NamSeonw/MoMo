@@ -1,0 +1,113 @@
+#main{
+    padding: 100px;
+    height: 500px;
+}
+
+#regForm #middle-box{
+    width:700px;
+    height:345px;
+    border:1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 60px;
+    text-align: center;
+    padding-top:20px ;
+}
+
+#title{
+    font-size: 40px;
+}
+
+#title-box{
+    width:650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-top:20px ;
+    padding-bottom: 20px;
+    display: block;
+}
+#title-box>form{
+    margin-top: 40px;
+}
+
+#regForm #middle-box>div{
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 20px;
+    display: flex;
+}
+#contentInput{
+    height: 125px;
+}
+#regForm #middle-box>div>input{
+    width:400px;
+    height:30px;
+    
+}
+#regForm #middle-box>div>textarea{
+    width:400px;
+    height:125px;
+    
+}
+
+#regForm #middle-box>div>label{
+    width: 75px;
+    font-size: 21px;
+}
+
+
+#reviewMenu{
+    text-align: right;
+    width: 615px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    position: relative;
+}
+#reviewMenu>span>input{
+    position: absolute;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: -webkit-pictograph;
+    font-weight: bold;
+}
+#reviewMenu>span{
+    position: absolute;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: -webkit-pictograph;
+    font-weight: bold;
+}
+
+#reviewMenu>span:first-child>input{
+    right:45px;
+    border:none;
+}
+
+
+#reviewMenu>span:last-child{
+    right:0px;
+}
+
+#fileName{
+    width: 256px !important;
+}
+.file_input_hidden{
+	font-size: 23px;
+	 position: absolute;
+	 right: 121px;
+	 top: 294px;
+	 opacity: 0;
+     width: 69px !important;
+	 height: 32px !important;
+}
+#file_input_button{
+    width: 69px !important;
+    position: absolute !important;
+    left: 510px !important;
+    top: 293px !important;
+    height: 34px !important;
+}

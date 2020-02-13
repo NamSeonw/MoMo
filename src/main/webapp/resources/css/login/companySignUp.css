@@ -1,0 +1,134 @@
+#main{
+    padding: 20px;
+    height: 710px;
+}
+#bg-box{
+    height: 840px;
+}
+#middle-box{
+    width:500px;
+    height: 670px;
+    border:1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top:20px ;
+}
+
+#title{
+    font-size: 40px;
+}
+
+#signupForm{
+    height: 470px;
+    position: relative;
+}
+
+#signupForm>form>label{
+    font-size: 18px;
+}
+
+#formContent{
+    text-align: left;
+    padding-left: 60px;
+    margin-bottom: 25px;
+}
+#formContent>div{
+    height: 68px;
+}
+#formContent>div>input{
+    width:360px;
+    height:25px;
+}
+#inputEmail{
+    height:25px;
+}
+
+#companyDiv{
+    height:47px;
+    display: flex;
+}
+#companyDiv>div:first-child{
+    margin-right:19px;
+}
+#companyDiv>div>input{
+    height:25px;
+}
+
+#emailOption{
+    height: 30px;
+    width: 175px;
+}
+#signUpButton{
+    position: relative;
+}
+#signUpButton>a>input{
+    width: 100px;
+    height: 50px;
+    background-color: #5b9bd5;
+    border-color: #5b9bd5;
+    color:white;
+    font-size: 16px;
+
+}
+
+#signUpButton>a:first-child>input{
+    position: absolute;
+    left:125px;
+    top: -30px;
+}
+#signUpButton>a:last-child>input{
+    position: absolute;
+    right:125px;
+    top: -30px;
+}
+#idConfirm{
+	position: relative;
+    left: 110px;
+    color: red;
+}
+#pwdConfirm{
+	position: relative;
+    left: 30px;
+    color: red;
+}
+#pwdchk{
+    position: relative;
+    left: 123px;
+    color: red;
+}
+#idchk{
+    font-size: 15px;
+    color: red;
+}
+
+#contact-confirm{
+	font-size: 15px;
+    color: red;
+}
+
+#address1{
+    height: 137px !important;
+}
+
+#address1>#postcode{
+	width: 130px;
+}
+
+#address1>#search{
+	width: 130px;
+    position: absolute;
+    right: 76px;
+}
+
+#address1 *{
+	margin-top: 10px;
+}
+
+#address1>#detailAddress{
+	width: 180px;
+}
+
+#address1>#extraAddress{
+	width: 171px;
+}

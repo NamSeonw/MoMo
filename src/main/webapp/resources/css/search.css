@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+#title-box{
+	width: 840px;
+    display: flex;
+    padding-left: 35px;
+}
+
+#title-box>.search-box {
+	position: relative;
+	display: flex;
+	width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 30px;
+	align-items: baseline;
+}
+
+#search-form{
+	margin-left: 400px;
+	height: fit-content;
+	position: relative;
+	top: 12px;
+}
+
+.search-box {
+	height: fit-content;
+	border-radius: 50px;
+}
+
+.search-bar {
+	font-size: 20px;
+	vertical-align: middle;
+	border-radius: 50px;
+}
+
+.search-mark {
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	cursor: pointer;
+}

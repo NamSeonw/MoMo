@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.momo.web.dao.MemberDao">
+	
+	<select id="getList" resultType="com.momo.web.entity.Member">
+		SELECT * FROM Member
+	</select>
+	
+	<select id="getById" resultType="com.momo.web.entity.Member">
+		SELECT * FROM Member WHERE id=#{id}
+	</select>
+	
+	<select id="getByLoginId" resultType="com.momo.web.entity.Member">
+		SELECT * FROM Member WHERE loginId=#{loginId}
+	</select>
+	
+	<select id="getByNameAndEmail" resultType="com.momo.web.entity.Member">
+		SELECT * FROM Member WHERE name=#{param1} and email=#{param2}
+	</select>
+	
+	<select id="getByLoginIdAndEmail" resultType="com.momo.web.entity.Member">
+		SELECT * FROM Member WHERE loginId=#{param1} and email=#{param2}
+	</select>
+	
+	<insert id="insert" parameterType="com.momo.web.entity.Member">
+		INSERT INTO Member(loginId,pwd,name,birthday,gender,phone,email,blacklist)
+		VALUES(#{loginId},#{pwd},#{name},#{birthday},#{gender},
+				#{phone},#{email},#{blacklist})
+	</insert>
+	
+	<delete id="delete" parameterType="com.momo.web.entity.Member">
+		DELETE FROM Member WHERE id=#{id}
+	</delete>
+	
+	<update id="update" parameterType="com.momo.web.entity.Member">
+		UPDATE Member
+		SET
+			pwd=#{pwd},
+			phone=#{phone},
+			email=#{email},
+			blacklist=#{blacklist}
+		WHERE id=#{id}
+	</update>
+	
+</mapper>

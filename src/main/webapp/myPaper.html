@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link href="./css/default.css" type="text/css" rel="stylesheet">
+<script src="./js/modal.js" ></script>
+<script src="./js/util.js" ></script>
+<style>
+.text-box {
+	background: #dadada;
+	width: 250px;
+	height: 20px;
+}
+#content-box {
+    width: 700px;
+    height: 100px;
+	margin-top: 40px;
+}
+#pager{
+	text-align: center;
+}
+.small-box{
+	border: 1px solid black;
+	border-radius: 50px;
+	padding-left: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#content{
+	display: block;
+}
+#date{
+	margin-left: 30px;
+}
+#position{
+	margin-left: 30px;
+}
+#time{
+	margin-left: 30px;
+}
+#content{
+	margin-top: 10px;
+}
+#list{
+	display: flex;
+	margin-top: 14px;
+	position: absolute;
+	right: 0px;
+	margin-right: 15px;
+}
+#list *{
+	margin-left: 14px;
+}
+#edit:hover, #review:hover, #del:hover{
+	color:	#5b9bd5;
+}
+#matching{
+	position: absolute;
+    right: 438px;
+}
+#title-box{
+	position: relative;
+    left: 430px;
+}
+#pager{
+	margin-top: 10px;
+	margin-top: 60px;
+}
+#pager-ul{
+	display: inline-flex;
+}
+#pager-ul li{
+	margin-left: 5px;
+}
+#matching-text:hover, #matching-complete:hover{
+	color:#5b9bd5;
+}
+
+</style>
+<body>
+	<div id="bg-box">
+	<header id="header">
+			<div>
+				<h1 class="d-none">헤더</h1>
+				<div>
+					<img alt="sideLlst" src="resources/images/list.png" width="25px" height="25px">
+				</div>
+			</div>
+		</header>
+	
+	<main id ="main">
+		<div id=middle-box>
+			<div id="title-box">
+
+			<h1 id="title">
+				<span id="text-red">MY</span><span>P</span><span id="text-green">A</span><span>PE</span><span id="text-blue">R</span>
+			</h1>
+		</div>
+
+		<div id="matching">
+			<a id="matching-text" href="">매칭중</a>
+			<span>/</span>
+			<a id="matching-complete" href="">매칭완료</a>
+		</div>
+
+		<script>
+		window.addEventListener("load", function () {
+			var smallBox = document.querySelectorAll(".small-box");
+			var contentDiv = document.createElement("div");
+			var body = document.querySelector("#content-box");
+
+			for (var i = 0; i < smallBox.length; i++) {
+				smallBox[i].onclick = function () {
+
+					var screen = document.createElement("div");
+					var back = document.createElement("div");
+					
+					CSS.set(this,{
+						border : "2px solid black",
+						color: "black",
+						width:"700px",
+						background:"white",
+						
+					});
+					
+					CSS.set(screen, {
+						width : "100%",
+						height : "100%",
+						background : "#000",
+						opacity : "0.5",
+						position : "fixed",
+						top : "0px",
+						left : "0px"
+					});
+					
+					CSS.set(back, {
+						width : "500px",
+						height : "500px",
+					});
+					
+					if(back != null){
+					screen.append(back);
+					back.append(this);
+
+					document.body.append(screen);
+					console.log(back);
+				}
+
+         		   	}
+				}
+		});
+		
+		</script>
+		<div id="content-box">
+			<div>
+				<div class="small-box">
+					<span>인원수 : </span><span>200명</span>
+					<span id="date">예약을 원하는 날 : </span><span>2019-12-21</span>
+					<span id="position">위치 : </span><span>목동</span>
+					<span id="time">시간 : </span><span>20:20</span>
+					<div id="content"><span>친구들끼리 분위기 좋고 맛있는곳에서 술 좀 마시려고 합니다. 연락주세요^^</span></div>
+				</div>				
+				<div id="list">
+					<form action="" method="post">
+						<a onclick="submit()" href="" id="del">삭제</a>
+					</form>
+						<a href="" id="edit">수정</a>
+						<a href="" id="review">리뷰작성</a>
+				</div>
+			</div>
+		</div>
+		<div id="content-box">
+			<div>
+				<div class="small-box">
+					<span>인원수 : </span><span>20명</span>
+					<span id="date">예약을 원하는 날 : </span><span>2019-12-21</span>
+					<span id="position">위치 : </span><span>목동</span>
+					<span id="time">시간 : </span><span>20:20</span>
+					<div id="content"><span>친구들끼리 분위기 좋고 맛있는곳에서 술 좀 마시려고 합니다. 연락주세요^^</span></div>
+				</div>		
+				<div id="list">
+					<form action="" method="post">
+						<a onclick="submit()" href="" id="del">삭제</a>
+					</form>
+						<a href="" id="edit">수정</a>
+						<a href="" id="review">리뷰작성</a>
+				</div>
+			</div>
+		</div>
+		<div id="content-box">
+			<div>
+				<div class="small-box">
+					<span>인원수 : </span><span>100명</span>
+					<span id="date">예약을 원하는 날 : </span><span>2019-12-21</span>
+					<span id="position">위치 : </span><span>목동</span>
+					<span id="time">시간 : </span><span>20:20</span>
+					<div id="content"><span>친구들끼리 분위기 좋고 맛있는곳에서 술 좀 마시려고 합니다. 연락주세요^^</span></div>
+				</div>				
+				<div id="list">
+					<form action="" method="post">
+						<a onclick="submit()" href="" id="del">삭제</a>
+					</form>
+						<a href="" id="edit">수정</a>
+						<a href="" id="review">리뷰작성</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="pager">
+			<ul id="pager-ul">
+				<a href=""><li>◀</li></a>
+				<a href=""><li>1</li></a>
+				<a href=""><li>2</li></a>
+				<a href=""><li>▶</li></a>
+			</ul>
+		</div>
+	</div>
+	
+	</main>
+	<footer id="footer">
+		<div id="footer-box">
+			<!-- 회사명, 사업자번호, 대표자, 연락처, 주소 -->
+			<h2 class="d-none">회사소개</h2>
+			<div>
+				<dl>
+					<dt>회사명:</dt>
+					<dd>MOMO</dd>
+					<dt>대표자:</dt>
+					<dd>정다혜</dd>
+					<dt>연락처:</dt>
+					<dd>010-2550-8923</dd>
+				</dl>
+				<dl>
+					<dt>주소:</dt>
+					<dd>서울특별시 중구 다동 88 에이콘 아카데미 종로지점</dd>
+				</dl>
+			</div>
+			<p>Copyright ⓒ momo.com 2019-2019 All Right Reserved. Contact
+				admin@momo.com for more information</p>
+		</div>
+	</footer>
+	
+</div>
+
+
+</body>
+</html>

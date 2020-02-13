@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.pager {
+	display: flex;
+	position: relative;
+	top: 70px;
+	align-items: center;
+	justify-content: center;
+}
+
+.post-pager {
+	top: 0px;
+}
+
+.com-papper{
+	top: -10px;	
+}
+
+.success-pager{
+	top: 15px;
+}
+.orange {
+	color: #5b9bd5;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+#pages {
+	display: flex;
+}
+
+.margin-left {
+	margin-left: 12px;
+}
+
+.btn-next {
+	padding-left: 10px;
+}
+
+.btn-prev {
+	margin-right: 10px;
+}

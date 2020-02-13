@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link href="./css/default.css" type="text/css" rel="stylesheet">
+<style>
+	.text-box{
+		background: #dadada;
+		width: 250px;
+		height: 27px;	
+		margin-left: 70px;
+	}
+	#text-red{
+		color: #c00000;
+	}
+	#text-green{
+		color: #70ad47;
+	}
+	#text-blue{
+		color: #5b9bd5;
+	}
+    #content-box {
+      width: 820px;
+  	  height: 460px;
+  	  border: 1px solid black;
+	  border-radius: 50px;
+    }
+    form span{
+		font-size: 25px;
+		vertical-align: middle;
+	}
+	form{
+		margin-top: 30px;
+  		margin-left: 140px;
+	}
+	form *{
+		margin-top: 16px;
+	}
+	#text-date{
+		background: #dadada;
+   		width: 122px;
+    	height: 27px;
+    	margin-left: 51px;
+    	padding-left: 23px;
+	}
+	#text-time{
+		background: #dadada;
+   		width: 122px;
+    	height: 27px;
+		margin-left: 20px;
+    	padding-left: 23px;
+	}
+	#text-position{
+	    margin-left: 90px;
+	}
+	#text-goal{
+	    margin-left: 90px;
+	}
+	#text-content{
+		background: #dadada;
+		margin-left: 89px;
+        width: 351px;
+	    height: 90px;
+	}
+	#member-icon{
+		position: absolute;
+	    left: 100px;
+		width: 25px;
+ 	    top: 42px;
+		height: 25px;
+	}
+	#title-box{
+		position: relative;
+		left: 381px;
+	}
+	#btn{
+	    position: absolute;
+		right: 199px;
+		bottom: 80px;
+		font-size: 20px;
+	}
+	#btn:hover{
+		color: #5b9bd5;
+	}
+</style>
+<body>
+    <div id="bg-box">
+	<header id="header">
+			<div>
+				<h1 class="d-none">헤더</h1>
+				<div>
+					<img alt="sideLlst" src="resources/images/list.png" width="25px" height="25px">
+				</div>
+			</div>
+		</header>
+
+    <main id="main">
+        <div id="middle-box">
+	        <div id="title-box">
+	            <h1 id="title">
+	                 <span id="text-red">ED</span><span>IT</span><span id="text-green">RE</span><span>VI</span><span id="text-blue">EW</span>
+	            </h1>
+	         </div>
+    	     <div id="content-box">
+      		  <img id="member-icon" src="resources/images/memberIcon.png">
+	     	   <form action="" method="POST">
+	            <div id="input-people"><span>인원수</span><input type="text" class="text-box"></div>
+	            <div id="input-date"><span>예약일시</span><input type="date" id="text-date"><input type="time" id="text-time"></div>
+	            <div id="input-position"><span>위치</span><input type="text" id="text-position" class="text-box"></div>
+	            <div id="input-content"><span>내용</span><input id="text-content" type="text" ></div>
+	            <a id="btn" href="">작성하기</a>
+	      	  </form>
+	        </div>
+	    </div>
+	</main>
+
+	<footer id="footer">
+        <div id="footer-box">
+            <!-- 회사명, 사업자번호, 대표자, 연락처, 주소 -->
+            <h2 class="d-none">회사소개</h2>
+            <div>
+                <dl>
+                    <dt>회사명:</dt>
+                    <dd>MOMO</dd>
+                    <dt>대표자:</dt>
+                    <dd>정다혜</dd>
+                    <dt>연락처:</dt>
+                    <dd>010-2550-8923</dd>
+                </dl>
+                <dl>
+                    <dt>주소:</dt>
+                    <dd>서울특별시 중구 다동 88 에이콘 아카데미 종로지점</dd>
+                </dl>
+            </div>
+            <p>Copyright ⓒ momo.com 2019-2019 All Right Reserved. Contact
+                admin@momo.com for more information</p>
+        </div>
+    </footer>
+    </div>  
+</body>
+</html>

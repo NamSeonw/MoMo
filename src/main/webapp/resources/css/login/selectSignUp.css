@@ -1,0 +1,89 @@
+#middle-box{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#title{
+    font-size: 55px;
+}
+
+#title-box>h2{
+    color:#FF3636;
+    font-size: 22px;
+}
+#title-box>span{
+    font-size: 22px;
+}
+
+#list-box{
+    margin-top:45px;
+}
+
+#list-box>ul{
+    position: relative;
+    display: flex;
+    width: 500px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#list-box>ul>li{
+    position: absolute;
+    font-size: 22px;
+    color:#5D5D5D;
+}
+#list-box>ul>li:first-child{
+    left:0px;
+}
+#list-box>ul>li:last-child{
+    right:0px;
+}
+
+#list-box>ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+#selectSignUp-form{
+    margin-top: 20px;
+    display: flex;
+    position: relative;
+}
+#selectSignUp-form>div{
+    position: absolute;
+    border:1px solid black;
+    width:300px;
+    height:300px;
+}
+
+#selectSignUp-form>div:first-child{
+    left:70px;
+}
+
+#selectSignUp-form>div:last-child{
+    right:80px;
+}
+
+#selectSignUp-form>div:first-child>img{
+    width: 300px;
+}
+#selectSignUp-form>div:last-child>img{
+    height: 198px;
+    width: 300px;
+}
+
+.selectButton{
+    width:150px;
+    height:50px;
+    background-color: #ebebeb;
+    font-size: 16px;
+    font-weight: bold
+}
