@@ -127,7 +127,7 @@
 	</dependencies>
 	<properties><!-- jdk버전 설정 -->
 		<!-- <x>30</x> ${x} 변수 선언.. 하고 사용하기 -->
-		<springframework.version>5.0.4.RELEASE</springframework.version>
+		<springframework.version>5.2.20.RELEASE</springframework.version>
 		<springsecurity.version>5.0.3.RELEASE</springsecurity.version>
 		<tomcat.version>9.0.7</tomcat.version>
 
